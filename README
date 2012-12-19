@@ -1,0 +1,26 @@
+Jessica Hamrick
+jhamrick@berkeley.edu
+
+Emacs version: 24.2.1
+
+Emacs plugins versions:
+-----------------------
+ * Auto-Complete 1.3.1
+ * Websocket 1.0
+ * Template 3.1c
+ * Python Mode 6.1.0
+ * Pymacs 0.25
+ * Emacs IPython Notebook 0.2.0alpha0
+ * Markdown Mode 1.8.1
+ * Fill Column Indicator 1.83
+ * Color Theme 6.6.0
+ * Ropemacs 0.7
+ * AucTeX 11.86
+
+Non-Emacs dependencies:
+-----------------------
+ * Python 2.7.3
+ * IPython 0.13.1
+ * Rope 0.9.4
+ * Ropemode 0.2
+
