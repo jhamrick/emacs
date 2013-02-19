@@ -20,9 +20,9 @@
 
 
 ; python-mode
-;(setq py-install-directory "~/.emacs.d/python-mode-6.0.11")
-;(setq py-install-directory "~/.emacs.d/python-mode-6.0.12")
-(setq py-install-directory "~/.emacs.d/python-mode-6.1.0")
+;(setq py-install-directory "~/.emacs.d/python-mode-6.0.11/")
+;(setq py-install-directory "~/.emacs.d/python-mode-6.0.12/")
+(setq py-install-directory "~/.emacs.d/python-mode-6.1.0/")
 (add-to-list 'load-path py-install-directory)
 (require 'python-mode) 
 
@@ -45,37 +45,89 @@
 (setq py-split-windows-on-execute-p -1)
 ; try to automagically figure out indentation
 (setq py-indent-honors-inline-comment 1)
-;(setq py-indent-honors-inline-comment -1)
+;; ;(setq py-indent-honors-inline-comment -1)
 (setq-default py-smart-indentation 1)
 
+(defun load-pycomplete ()
+  "Load and initialize pycomplete."
+  (interactive)
+  (let* ((pyshell (py-choose-shell))
+         (path (getenv "PYTHONPATH")))
+    (setenv "PYTHONPATH" (concat
+                          (expand-file-name py-install-directory) "completion"
+                          (if path (concat path-separator path))))
+    (if (py-install-directory-check)
+        (progn
+          (setenv "PYMACS_PYTHON" (if (string-match "IP" pyshell)
+                                      "python"
+                                    pyshell))
+          (autoload 'pymacs-apply "pymacs")
+          (autoload 'pymacs-call "pymacs")
+          (autoload 'pymacs-eval "pymacs")
+          (autoload 'pymacs-exec "pymacs")
+          (autoload 'pymacs-load "pymacs")
+	  ;; (autoload 'pymacs-autoload "pymacs")
+	  ;; (setq py-load-pymacs-p 1)
+	  ;; (setq py-complete-set-keymap-p 1)
+	  ;; (require 'pymacs)
+          (load (concat py-install-directory "completion/pycomplete.el") nil t)
+	  (add-hook 'python-mode-hook 'py-complete-initialize))
+      (error "`py-install-directory' not set, see INSTALL"))))
+
 ; pymacs
-(add-to-list 'load-path "~/.emacs.d/pymacs-0.25")
-(autoload 'pymacs-apply "pymacs")
-(autoload 'pymacs-call "pymacs")
-(autoload 'pymacs-eval "pymacs" -1 1)
-(autoload 'pymacs-exec "pymacs" -1 1)
-(autoload 'pymacs-load "pymacs" -1 1)
-(autoload 'pymacs-autoload "pymacs")
-(setq py-load-pymacs-p 1)
-(setq py-complete-set-keymap-p 1)
+(defun setup-pymacs ()
+  (interactive)
+  ;(add-to-list 'load-path "~/.emacs.d/pymacs-0.25")
+  (add-to-list 'load-path "~/.emacs.d/pymacs-git")
+  (autoload 'pymacs-apply "pymacs")
+  (autoload 'pymacs-call "pymacs")
+  (autoload 'pymacs-eval "pymacs" -1 1)
+  (autoload 'pymacs-exec "pymacs" -1 1)
+  (autoload 'pymacs-load "pymacs" -1 1)
+  (autoload 'pymacs-autoload "pymacs")
+  (setq py-load-pymacs-p 1)
+  (setq py-complete-set-keymap-p 1))
+
+;; activate the virtualenv where Pymacs is located
+(virtualenv-workon "default/")
+(eval-after-load 'pymacs '(load-pycomplete))
+(setup-pymacs)
+(require 'pymacs)
+
+;; pyflakes flymake integration
+;; http://stackoverflow.com/a/1257306/347942
+(when (load "flymake" t)
+  (defun flymake-pyflakes-init ()
+    (let* ((temp-file (flymake-init-create-temp-buffer-copy
+                       'flymake-create-temp-inplace))
+           (local-file (file-relative-name
+                        temp-file
+                        (file-name-directory buffer-file-name))))
+      (list "/Users/jhamrick/bin/pycheckers" (list local-file))))
+  (add-to-list 'flymake-allowed-file-name-masks
+               '("\\.py\\'" flymake-pyflakes-init)))
+(add-hook 'python-mode-hook 'flymake-mode)
 
 ; ropemacs
 (defun load-ropemacs ()
   "Load pymacs and ropemacs"
   (interactive)
-  (require 'pymacs)
+  ;; (setup-pymacs)
+  ;; (require 'pymacs)
   (pymacs-load "ropemacs" "rope-")
   ;; Automatically save project python buffers before refactorings
   (setq ropemacs-confirm-saving 'nil))
 ;(add-hook 'python-mode-hook 'load-ropemacs)
 
 ; IPython notebook
-(add-to-list 'load-path "~/.emacs.d/emacs-ipython-notebook-0.2.0alpha0")
+;(add-to-list 'load-path "~/.emacs.d/emacs-ipython-notebook-0.2.0alpha0")
+(add-to-list 'load-path "~/.emacs.d/emacs-ipython-notebook-git/lisp")
 (require 'ein)
 
 ; use autocompletion, but don't start to autocomplete after a dot
-(setq ein:complete-on-dot -1)
+;(setq ein:complete-on-dot -1)
 (setq ein:use-auto-complete 1)
+
 ; set python console args
 (setq ein:console-args
       (if (system-is-mac)
@@ -84,7 +136,7 @@
 	    '("--profile nbserver" "--gui=wx" "--pylab=wx" "--colors" "Linux"))))
 
 ; timeout settings
-(setq ein:query-timeout 5000)
+(setq ein:query-timeout 1000)
 
 ; load the notebook list after initialization
 ;(add-hook 'after-init-hook 'ein:notebooklist-load)
@@ -92,6 +144,8 @@
   (ein:notebooklist-load)
   (interactive)
   (ein:notebooklist-open))
+
+(setenv "PYTHONPATH" "/Users/jhamrick/project/pyutil/src:/Users/jhamrick/project/pystoch/src:/Users/jhamrick/project/gutenbach/server/lib:/Users/jhamrick/project/cogphysics/dev/code:/Developer/Panda3D/lib/:/usr/local/lib/python2.7/site-packages:")
 
 (provide 'python-settings)
 

@@ -27,7 +27,7 @@
     (setq ns-command-modifier 'meta))
 
 ; sane path
-(setq path "/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin")
+(setq path "$HOME/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin")
 (setenv "PATH" path)
 
 (provide 'ui-settings)

@@ -8,28 +8,57 @@
 (require 'text-settings)
 (require 'color-theme-settings)
 
-(require 'ido-settings)
+;; Popup
+(add-to-list 'load-path "~/.emacs.d/popup-git/")
+(require 'popup)
+
+;; Websocket
+(add-to-list 'load-path "~/.emacs.d/websocket-git")
+(require 'websocket)
+
+;; Ido mode
+(require 'ido)
+(ido-mode 1)
+
+;; Markdown mode
+(add-to-list 'load-path "~/.emacs.d/markdown-mode-git")
+(autoload 'markdown-mode "markdown-mode.el"
+  "Major mode for editing Markdown files" t)
+(setq auto-mode-alist
+      (cons '("\\.text" . markdown-mode) auto-mode-alist))
+
+;; C indentation styles
+(setq c-basic-offset 8)
+(setq c-default-style (quote (
+    (c-mode . "bsd") 
+    (java-mode . "java") 
+    (awk-mode . "awk") 
+    (other . "gnu"))))
+
+;; Auto complete
 (require 'auto-complete-settings)
-(require 'fill-column-indicator-settings)
 
+;; ;; Fill column indicator
+;; (require 'fill-column-indicator-settings)
+;; Python mode 
 (require 'python-settings)
-(require 'haskell-settings)
-(require 'church-settings)
-(require 'c-settings)
-(require 'matlab-settings)
-(require 'r-settings)
 
+;; LaTeX and Auctex
 (require 'latex-settings)
-(require 'encryption-settings)
-(require 'websocket-settings)
-(require 'markdown-settings)
-(require 'org-settings)
+
+;; Camelcase functions
 (require 'camelcase-settings)
-(require 'template-settings)
+
+
+;(require 'haskell-settings)
+;(require 'church-settings)
+;(require 'matlab-settings)
+;(require 'r-settings)
+;(require 'encryption-settings)
+;(require 'org-settings)
+;(require 'template-settings)
+
 
 (load 
  (setq custom-file (expand-file-name "settings/custom.el" user-emacs-directory))
  'noerror)
-
-;(server-start)
-;(find-file "~/Documents/todo.org")

@@ -29,4 +29,36 @@
   (interactive)
   (string-equal system-type "gnu/linux"))
 
+; Send selected region to omnifocus
+; From http://timprouty-tech.blogspot.com/2009/08/omnifocus-quick-entry-from-emacs.html
+(defun omniQuickEntry (beg end)
+  (interactive "r")
+  ;; (message (buffer-substring beg end))
+  (do-applescript (concat
+"tell application \"OmniFocus\"
+	tell quick entry
+		open
+		make new inbox task with properties {name:\""
+(buffer-substring beg end) "\"}
+		select {inbox task 1}
+	end tell
+end tell
+tell application \"System Events\"
+	tell process \"OmniFocus\"
+		keystroke tab
+	end tell
+end tell")
+		   ;; "tell front document of application \"OmniFocus\"
+		   ;; 	tell quick entry
+		   ;; 	    make new inbox task with properties {name:\""
+		   ;; 	        (buffer-substring beg end) "\"}
+		   ;; 	    activate
+		   ;; 	    select {inbox task 1}
+		   ;; 	end tell
+		   ;;  end tell")
+	))
+
+(global-set-key "\C-c o" 'omniQuickEntry)
+
+
 (provide 'custom-functions)
