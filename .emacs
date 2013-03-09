@@ -16,6 +16,10 @@
 (add-to-list 'load-path "~/.emacs.d/websocket-git")
 (require 'websocket)
 
+;; Request
+(add-to-list 'load-path "~/.emacs.d/request-git")
+(require 'request)
+
 ;; Ido mode
 (require 'ido)
 (ido-mode 1)
