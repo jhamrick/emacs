@@ -29,7 +29,11 @@
 (autoload 'markdown-mode "markdown-mode.el"
   "Major mode for editing Markdown files" t)
 (setq auto-mode-alist
-      (cons '("\\.text" . markdown-mode) auto-mode-alist))
+      (append 
+       (list '("\\.text" . markdown-mode) 
+	     '("\\.md" . markdown-mode) 
+	     )
+       auto-mode-alist))
 
 ;; C indentation styles
 (setq c-basic-offset 8)
