@@ -46,27 +46,30 @@
 ;; Auto complete
 (require 'auto-complete-settings)
 
-;; ;; Fill column indicator
-;; (require 'fill-column-indicator-settings)
+;; Camelcase functions
+(require 'camelcase-settings)
+
+;; Fill column indicator
+;(require 'fill-column-indicator-settings)
+
 ;; Python mode 
 (require 'python-settings)
 
 ;; LaTeX and Auctex
 (require 'latex-settings)
 
-;; Camelcase functions
-(require 'camelcase-settings)
+;; Church
+;(require 'church)
+
+;; Haskell
+;(require 'haskell-mode)
+
+;; R
+;(require 'ess-site)
+;(setq-default inferior-R-program-name "R")
 
 
-;(require 'haskell-settings)
-;(require 'church-settings)
-;(require 'matlab-settings)
-;(require 'r-settings)
-;(require 'encryption-settings)
-;(require 'org-settings)
-;(require 'template-settings)
-
-
+;; Put auto 'custom' changes in a separate file
 (load 
  (setq custom-file (expand-file-name "settings/custom.el" user-emacs-directory))
  'noerror)
