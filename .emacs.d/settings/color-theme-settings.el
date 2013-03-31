@@ -3,7 +3,7 @@
 ;-----------------;
 
 ; use the "Subtle Hacker" color theme as a base for the custom scheme
-(add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
+(add-to-list 'load-path "~/.emacs.d/plugins/color-theme-6.6.0")
 (require 'color-theme)
 (color-theme-initialize)
 (setq color-theme-is-global 1)

@@ -20,9 +20,7 @@
 
 
 ; python-mode
-;(setq py-install-directory "~/.emacs.d/python-mode-6.0.11/")
-;(setq py-install-directory "~/.emacs.d/python-mode-6.0.12/")
-(setq py-install-directory "~/.emacs.d/python-mode-6.1.0/")
+(setq py-install-directory "~/.emacs.d/plugins/python-mode-6.1.1/")
 (add-to-list 'load-path py-install-directory)
 (require 'python-mode) 
 
@@ -77,8 +75,7 @@
 ; pymacs
 (defun setup-pymacs ()
   (interactive)
-  ;(add-to-list 'load-path "~/.emacs.d/pymacs-0.25")
-  (add-to-list 'load-path "~/.emacs.d/pymacs-git")
+  (add-to-list 'load-path "~/.emacs.d/plugins/pymacs")
   (autoload 'pymacs-apply "pymacs")
   (autoload 'pymacs-call "pymacs")
   (autoload 'pymacs-eval "pymacs" -1 1)
@@ -108,22 +105,6 @@
                '("\\.py\\'" flymake-pyflakes-init)))
 (add-hook 'python-mode-hook 'flymake-mode)
 
-; ropemacs
-(defun load-ropemacs ()
-  "Load pymacs and ropemacs"
-  (interactive)
-  ;; (setup-pymacs)
-  ;; (require 'pymacs)
-  (pymacs-load "ropemacs" "rope-")
-  ;; Automatically save project python buffers before refactorings
-  (setq ropemacs-confirm-saving 'nil))
-;(add-hook 'python-mode-hook 'load-ropemacs)
-
-; IPython notebook
-;(add-to-list 'load-path "~/.emacs.d/emacs-ipython-notebook-0.2.0alpha0")
-(add-to-list 'load-path "~/.emacs.d/emacs-ipython-notebook-git/lisp")
-(require 'ein)
-
 ; use autocompletion, but don't start to autocomplete after a dot
 ;(setq ein:complete-on-dot -1)
 (setq ein:use-auto-complete 1)
@@ -138,12 +119,9 @@
 ; timeout settings
 (setq ein:query-timeout 1000)
 
-; load the notebook list after initialization
-;(add-hook 'after-init-hook 'ein:notebooklist-load)
-(defun load-ein () 
-  (ein:notebooklist-load)
-  (interactive)
-  (ein:notebooklist-open))
+; IPython notebook
+(add-to-list 'load-path "~/.emacs.d/plugins/emacs-ipython-notebook/lisp")
+(require 'ein)
 
 (setenv "PYTHONPATH" "/Users/jhamrick/project/pyutil/src:/Users/jhamrick/project/pystoch/src:/Users/jhamrick/project/gutenbach/server/lib:/Users/jhamrick/project/cogphysics/dev/code:/Developer/Panda3D/lib/:/usr/local/lib/python2.7/site-packages:")
 

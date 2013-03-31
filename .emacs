@@ -8,16 +8,19 @@
 (require 'text-settings)
 (require 'color-theme-settings)
 
+;; MuMaMo
+(load "~/.emacs.d/plugins/nxhtml/autostart.el")
+
 ;; Popup
-(add-to-list 'load-path "~/.emacs.d/popup-git/")
+(add-to-list 'load-path "~/.emacs.d/plugins/popup")
 (require 'popup)
 
 ;; Websocket
-(add-to-list 'load-path "~/.emacs.d/websocket-git")
+(add-to-list 'load-path "~/.emacs.d/plugins/websocket")
 (require 'websocket)
 
 ;; Request
-(add-to-list 'load-path "~/.emacs.d/request-git")
+(add-to-list 'load-path "~/.emacs.d/plugins/request")
 (require 'request)
 
 ;; Ido mode
@@ -25,7 +28,7 @@
 (ido-mode 1)
 
 ;; Markdown mode
-(add-to-list 'load-path "~/.emacs.d/markdown-mode-git")
+(add-to-list 'load-path "~/.emacs.d/plugins/markdown-mode")
 (autoload 'markdown-mode "markdown-mode.el"
   "Major mode for editing Markdown files" t)
 (setq auto-mode-alist
