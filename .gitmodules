@@ -1,0 +1,27 @@
+[submodule ".emacs.d/plugins/auto-complete"]
+	path = .emacs.d/plugins/auto-complete
+	url = git://github.com/auto-complete/auto-complete.git
+[submodule ".emacs.d/plugins/emacs-ipython-notebook"]
+	path = .emacs.d/plugins/emacs-ipython-notebook
+	url = git://github.com/tkf/emacs-ipython-notebook.git
+[submodule ".emacs.d/plugins/fill-column-indicator"]
+	path = .emacs.d/plugins/fill-column-indicator
+	url = git://github.com/alpaker/Fill-Column-Indicator.git
+[submodule ".emacs.d/plugins/markdown-mode"]
+	path = .emacs.d/plugins/markdown-mode
+	url = git://jblevins.org/git/markdown-mode.git
+[submodule ".emacs.d/plugins/nxhtml"]
+	path = .emacs.d/plugins/nxhtml
+	url = git://github.com/emacsmirror/nxhtml.git
+[submodule ".emacs.d/plugins/popup"]
+	path = .emacs.d/plugins/popup
+	url = git://github.com/auto-complete/popup-el.git
+[submodule ".emacs.d/plugins/pymacs"]
+	path = .emacs.d/plugins/pymacs
+	url = git://github.com/pinard/Pymacs.git
+[submodule ".emacs.d/plugins/request"]
+	path = .emacs.d/plugins/request
+	url = git://github.com/tkf/emacs-request.git
+[submodule ".emacs.d/plugins/websocket"]
+	path = .emacs.d/plugins/websocket
+	url = git://github.com/ahyatt/emacs-websocket.git
