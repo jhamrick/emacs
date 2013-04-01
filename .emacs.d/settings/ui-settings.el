@@ -26,8 +26,15 @@
 (if (system-is-mac)
     (setq ns-command-modifier 'meta))
 
-; sane path
-(setq path "$HOME/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin")
-(setenv "PATH" path)
+; set PATH, because we don't load .bashrc
+(setenv 
+ "PATH" (concat 
+	 "$HOME/bin:"
+	 "/bin:"
+	 "/usr/bin:"
+	 "/sbin:"
+	 "/usr/sbin:"
+	 "/usr/local/bin:"
+	 "/usr/local/sbin"))
 
 (provide 'ui-settings)
