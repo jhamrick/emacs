@@ -6,7 +6,6 @@
 (require 'window-settings)
 (require 'cursor-settings)
 (require 'text-settings)
-(require 'color-theme-settings)
 
 ;; MuMaMo
 (load "~/.emacs.d/plugins/nxhtml/autostart.el")
