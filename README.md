@@ -20,7 +20,6 @@ Emacs version: 24.2.1
 
 ### Manual install
 
-* [Color Theme](http://www.nongnu.org/color-theme/) 6.6.0
 * [Python Mode](https://launchpad.net/python-mode/) 6.1.1
 
 ## Non-Emacs dependencies
