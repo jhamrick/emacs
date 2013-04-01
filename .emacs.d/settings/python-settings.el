@@ -123,7 +123,15 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/emacs-ipython-notebook/lisp")
 (require 'ein)
 
-(setenv "PYTHONPATH" "/Users/jhamrick/project/pyutil/src:/Users/jhamrick/project/pystoch/src:/Users/jhamrick/project/gutenbach/server/lib:/Users/jhamrick/project/cogphysics/dev/code:/Developer/Panda3D/lib/:/usr/local/lib/python2.7/site-packages:")
+; Set PYTHONPATH, because we don't load .bashrc
+(setenv "PYTHONPATH"
+ (concat 
+  "/Users/jhamrick/project/pyutil/src:"
+  "/Users/jhamrick/project/pystoch/src:"
+  "/Users/jhamrick/project/gutenbach/server/lib:"
+  "/Users/jhamrick/project/cogphysics/dev/code:"
+  "/Developer/Panda3D/lib/:"
+  "/usr/local/lib/python2.7/site-packages:"))
 
 (provide 'python-settings)
 
