@@ -16,11 +16,6 @@
   (let ((fill-column (point-max)))
     (fill-region (region-beginning) (region-end) nil)))
 
-; uncomment a region
-;; (defun uncomment-region (beg end &optional arg)
-;;    (interactive "*r\np")
-;;    (comment-region beg end (- arg)))
-
 (defun system-is-mac ()
   (interactive)
   (string-equal system-type "darwin"))
