@@ -2,23 +2,6 @@
 ;;; Python Programming ;;;
 ;------------------------;
 
-; It seems like the new version of python mode doesn't work as
-; well... grumble. Going to continue using the old version until
-; IPython integration is better.
-
-;; ; python-mode
-;; (setq py-install-directory "~/.emacs.d/python-mode-5.1.0")
-;; (add-to-list 'load-path py-install-directory)
-;; (require 'python-mode) 
-
-;; ; use IPython
-;; (add-to-list 'load-path "~/.emacs.d/ipython")
-;; (require 'ipython)
-;; ; use the wx backend, for both mayavi and matplotlib
-;; (setq py-python-command-args 
-;;   '("--gui=wx" "--pylab=wx" "--colors" "Linux"))
-
-
 ; python-mode
 (setq py-install-directory "~/.emacs.d/plugins/python-mode-6.1.1/")
 (add-to-list 'load-path py-install-directory)
@@ -64,10 +47,6 @@
           (autoload 'pymacs-eval "pymacs")
           (autoload 'pymacs-exec "pymacs")
           (autoload 'pymacs-load "pymacs")
-	  ;; (autoload 'pymacs-autoload "pymacs")
-	  ;; (setq py-load-pymacs-p 1)
-	  ;; (setq py-complete-set-keymap-p 1)
-	  ;; (require 'pymacs)
           (load (concat py-install-directory "completion/pycomplete.el") nil t)
 	  (add-hook 'python-mode-hook 'py-complete-initialize))
       (error "`py-install-directory' not set, see INSTALL"))))
@@ -106,7 +85,7 @@
 (add-hook 'python-mode-hook 'flymake-mode)
 
 ; use autocompletion, but don't start to autocomplete after a dot
-;(setq ein:complete-on-dot -1)
+(setq ein:complete-on-dot -1)
 (setq ein:use-auto-complete 1)
 
 ; set python console args
