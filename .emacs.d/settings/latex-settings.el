@@ -9,7 +9,10 @@
       (require 'tex-site)
       (require 'font-latex)
       (setq TeX-view-program-list
-	    (quote (("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline %n %o %b"))))
+	    (quote 
+	     (("Skim" 
+	       (concat "/Applications/Skim.app/Contents/SharedSupport/displayline"
+		       " %n %o %b")))))
       (setq TeX-view-program-selection 
 	    (quote (((output-dvi style-pstricks) "dvips and gv") 
 		    (output-dvi "xdvi") 
