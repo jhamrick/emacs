@@ -5,6 +5,9 @@ jhamrick@berkeley.edu
 
 Emacs version: 24.2.1
 
+To install the plugins that are include as submodules, you will need
+to run `git submodule init; git submodule update`.
+
 ## Emacs plugins
 
 ### Included as submodules
