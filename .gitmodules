@@ -25,3 +25,9 @@
 [submodule ".emacs.d/plugins/websocket"]
 	path = .emacs.d/plugins/websocket
 	url = git://github.com/ahyatt/emacs-websocket.git
+[submodule ".emacs.d/plugins/autopair"]
+	path = .emacs.d/plugins/autopair
+	url = git://github.com/capitaomorte/autopair.git
+[submodule ".emacs.d/plugins/smart-operator"]
+	path = .emacs.d/plugins/smart-operator
+	url = git://github.com/xwl/smart-operator.git

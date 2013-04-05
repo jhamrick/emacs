@@ -7,6 +7,14 @@
 (require 'cursor-settings)
 (require 'text-settings)
 
+;; Smart Operator
+(add-to-list 'load-path "~/.emacs.d/plugins/smart-operator")
+(require 'smart-operator)
+
+;; Autopair
+(add-to-list 'load-path "~/.emacs.d/plugins/autopair")
+(require 'autopair)
+
 ;; MuMaMo
 (load "~/.emacs.d/plugins/nxhtml/autostart.el")
 
