@@ -102,6 +102,12 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/emacs-ipython-notebook/lisp")
 (require 'ein)
 
+; shortcut function to load notebooklist
+(defun load-ein () 
+  (ein:notebooklist-load)
+  (interactive)
+  (ein:notebooklist-open))
+
 ; Set PYTHONPATH, because we don't load .bashrc
 (setenv "PYTHONPATH"
  (concat 
