@@ -11,7 +11,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "gray2" :foreground "#FFF991" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :foundry "apple" :family "DejaVu_Sans_Mono"))))
+ '(default ((t (:inherit nil :stipple nil :background "gray2" :foreground "#FFF991" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal))))
  '(border ((t nil)))
  '(cursor ((t (:background "firebrick1" :foreground "black"))))
  '(ein:cell-input-area ((((class color) (background dark)) (:background "gray10"))))
@@ -27,6 +27,10 @@
  '(trailing-whitespace ((((class color) (background dark)) (:background "firebrick1")))))
 
 (require 'faces)
+(if (system-is-mac)
+    (set-face-attribute 'default nil
+			:foundry "apple" 
+			:family "DejaVu_Sans_Mono"))
 (set-face-attribute 'cursor nil
 		    :background "firebrick1" 
 		    :foreground "black")
