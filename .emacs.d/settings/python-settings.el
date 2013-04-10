@@ -15,7 +15,7 @@
 	      (if (system-is-mac)
 		  '("--gui=osx" "--pylab=osx" "--colors" "Linux")
 		(if (system-is-linux)
-		    '("--gui=wx" "--pylab=wx" "--color" "Linux")
+		    '("--gui=wx" "--pylab=wx" "--colors" "Linux")
 		  '())))
 (setq py-force-py-shell-name-p 1)
 
