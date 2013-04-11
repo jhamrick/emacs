@@ -78,6 +78,10 @@
 ;(require 'ess-site)
 ;(setq-default inferior-R-program-name "R")
 
+;; Git
+(add-to-list 'load-path "~/.emacs.d/plugins/magit")
+(require 'magit)
+
 
 ;; Put auto 'custom' changes in a separate file
 (load 
