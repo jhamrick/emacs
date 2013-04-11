@@ -42,6 +42,7 @@
       (append 
        (list '("\\.text" . markdown-mode) 
 	     '("\\.md" . markdown-mode) 
+	     '("\\.markdown" . markdown-mode) 
 	     )
        auto-mode-alist))
 
