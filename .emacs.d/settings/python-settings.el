@@ -3,7 +3,7 @@
 ;------------------------;
 
 ; python-mode
-(setq py-install-directory "~/.emacs.d/plugins/python-mode-6.1.1/")
+(setq py-install-directory "~/.emacs.d/plugins/python-mode/")
 (add-to-list 'load-path py-install-directory)
 (require 'python-mode) 
 
@@ -26,8 +26,13 @@
 (setq py-split-windows-on-execute-p -1)
 ; try to automagically figure out indentation
 (setq py-indent-honors-inline-comment 1)
-;; ;(setq py-indent-honors-inline-comment -1)
 (setq-default py-smart-indentation 1)
+; Delete trailing whitespace maybe left by py-newline-and-indent
+(setq py-newline-delete-trailing-whitespace-p 1)
+; TAB will indent/cycle the region, not just the current line
+(setq py-tab-shifts-region-p 1)
+; Format the whole docstring
+(setq py-paragraph-fill-docstring-p 1)
 
 (defun load-pycomplete ()
   "Load and initialize pycomplete."
