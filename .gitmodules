@@ -31,3 +31,6 @@
 [submodule ".emacs.d/plugins/smart-operator"]
 	path = .emacs.d/plugins/smart-operator
 	url = git://github.com/xwl/smart-operator.git
+[submodule ".emacs.d/plugins/magit"]
+	path = .emacs.d/plugins/magit
+	url = git://github.com/magit/magit.git
