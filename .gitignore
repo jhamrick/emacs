@@ -3,3 +3,4 @@
 color-theme-*
 python-mode*
 
+.emacs.d/plugins/auctex

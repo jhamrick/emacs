@@ -26,6 +26,7 @@ to run `git submodule init; git submodule update`.
 
 ### Manual install
 
+* [AUCTex](http://www.gnu.org/software/auctex/download.html) 11.87
 * [Python Mode](https://launchpad.net/python-mode/) 6.1.1
 
 ## Non-Emacs dependencies
