@@ -34,3 +34,6 @@
 [submodule ".emacs.d/plugins/magit"]
 	path = .emacs.d/plugins/magit
 	url = git://github.com/magit/magit.git
+[submodule ".emacs.d/plugins/color-theme-solarized"]
+	path = .emacs.d/plugins/color-theme-solarized
+	url = git://github.com/sellout/emacs-color-theme-solarized.git
