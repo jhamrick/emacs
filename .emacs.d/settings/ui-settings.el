@@ -2,6 +2,11 @@
 ;;; User Interface ;;;
 ;--------------------;
 
+; color theme
+(add-to-list 'custom-theme-load-path "~/.emacs.d/plugins/color-theme-solarized")
+(load-theme 'solarized-dark 1)
+(setq solarized-termcolors 256)
+
 ; always use spaces, not tabs, when indenting
 (setq-default indent-tabs-mode -1)
  
