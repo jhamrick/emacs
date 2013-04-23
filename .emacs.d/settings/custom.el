@@ -35,4 +35,5 @@
  '(markdown-header-face-6 ((t (:inherit markdown-header-face :slant italic :weight normal))))
  '(markdown-math-face ((t (:inherit font-lock-string-face :foreground "#cb4b16" :slant italic))))
  '(mode-line ((t (:background "#0a2832" :foreground "#eee8d4" :inverse-video t :box nil :underline nil :slant normal :weight normal))))
+ '(mumamo-background-chunk-major ((t (:background "#002b36"))))
  '(py-variable-name-face ((t (:inherit default :foreground "#268bd2")))))
