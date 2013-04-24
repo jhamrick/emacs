@@ -91,6 +91,11 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/magit")
 (require 'magit)
 
+;; scss
+(add-to-list 'load-path "~/.emacs.d/plugins/scss-mode")
+(autoload 'scss-mode "scss-mode")
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
+
 
 ;; Put auto 'custom' changes in a separate file
 (load 

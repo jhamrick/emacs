@@ -37,3 +37,6 @@
 [submodule ".emacs.d/plugins/color-theme-solarized"]
 	path = .emacs.d/plugins/color-theme-solarized
 	url = git://github.com/sellout/emacs-color-theme-solarized.git
+[submodule ".emacs.d/plugins/scss-mode"]
+	path = .emacs.d/plugins/scss-mode
+	url = git://github.com/antonj/scss-mode.git
