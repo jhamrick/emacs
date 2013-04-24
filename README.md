@@ -16,12 +16,15 @@ to run `git submodule init; git submodule update`.
 * [Autopair](https://github.com/capitaomorte/autopair)
 * [Emacs IPython Notebook](https://github.com/tkf/emacs-ipython-notebook)
 * [Fill Column Indicator](https://github.com/alpaker/Fill-Column-Indicator)
+* [Magit](https://github.com/magit/magit)
 * [Markdown Mode](http://jblevins.org/projects/markdown-mode/)
-* [nxhtml](httpss://github.com/emacsmirror/nxhtml)
+* [nxhtml](https://github.com/emacsmirror/nxhtml)
 * [Popup](https://github.com/auto-complete/popup-el)
 * [Pymacs](https://github.com/pinard/Pymacs)
 * [Request](https://github.com/tkf/emacs-request)
+* [SCSS Mode](https://github.com/antonj/scss-mode/)
 * [Smart Operator](https://github.com/xwl/smart-operator)
+* [Solarized Color Theme](https://github.com/sellout/emacs-color-theme-solarized)
 * [Websocket](https://github.com/ahyatt/emacs-websocket)
 
 ### Manual install
@@ -32,7 +35,7 @@ to run `git submodule init; git submodule update`.
 ## Non-Emacs dependencies
 
 * Python 2.7.3
-* IPython 0.13.1
+* IPython 1.0.dev
 
 ## Unused dependencies
 
