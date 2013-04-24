@@ -1,4 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/settings")
+(setq plugin-path "~/.emacs.d/plugins/")
 
 (require 'custom-functions)
 (require 'ui-settings)
@@ -8,15 +9,15 @@
 (require 'text-settings)
 
 ;; Smart Operator
-(add-to-list 'load-path "~/.emacs.d/plugins/smart-operator")
+(include-plugin "smart-operator")
 (require 'smart-operator)
 
 ;; Autopair
-(add-to-list 'load-path "~/.emacs.d/plugins/autopair")
+(include-plugin "autopair")
 (require 'autopair)
 
 ;; MuMaMo
-(load "~/.emacs.d/plugins/nxhtml/autostart.el")
+(load (make-plugin-path "nxhtml/autostart.el"))
 ;; Workaround the annoying warnings:
 ;;    Warning (mumamo-per-buffer-local-vars):
 ;;    Already 'permanent-local t: buffer-file-name
@@ -27,15 +28,15 @@
            (delq 'buffer-file-name mumamo-per-buffer-local-vars))))
 
 ;; Popup
-(add-to-list 'load-path "~/.emacs.d/plugins/popup")
+(include-plugin "popup")
 (require 'popup)
 
 ;; Websocket
-(add-to-list 'load-path "~/.emacs.d/plugins/websocket")
+(include-plugin "websocket")
 (require 'websocket)
 
 ;; Request
-(add-to-list 'load-path "~/.emacs.d/plugins/request")
+(include-plugin "request")
 (require 'request)
 
 ;; Ido mode
@@ -43,7 +44,7 @@
 (ido-mode 1)
 
 ;; Markdown mode
-(add-to-list 'load-path "~/.emacs.d/plugins/markdown-mode")
+(include-plugin "markdown-mode")
 (autoload 'markdown-mode "markdown-mode.el"
   "Major mode for editing Markdown files" t)
 (setq auto-mode-alist
@@ -88,11 +89,12 @@
 ;(setq-default inferior-R-program-name "R")
 
 ;; Git
-(add-to-list 'load-path "~/.emacs.d/plugins/magit")
+(include-plugin "magit")
 (require 'magit)
 
-;; scss
-(add-to-list 'load-path "~/.emacs.d/plugins/scss-mode")
+;; SCSS Mode
+(setq exec-path (cons (expand-file-name "~/.rvm/gems/ruby-1.9.3-p392/bin") exec-path))
+(include-plugin "scss-mode")
 (autoload 'scss-mode "scss-mode")
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 

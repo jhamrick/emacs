@@ -2,10 +2,9 @@
 ;;; Auto-Complete ;;;
 ;-------------------;
 
-(setq ac-directory "~/.emacs.d/plugins/auto-complete")
+(setq ac-directory (make-plugin-path "auto-complete"))
 (add-to-list 'load-path ac-directory)
 (require 'auto-complete) 
-;; (setq ac-dictionary-files (list (concat "~/.emacs.d/" ".dict")))
 (add-to-list 'ac-dictionary-directories (concat ac-directory "ac-dict"))
 (require 'auto-complete-config) 
 (ac-config-default)

@@ -3,7 +3,7 @@
 ;--------------------;
 
 ; color theme
-(add-to-list 'custom-theme-load-path "~/.emacs.d/plugins/color-theme-solarized")
+(add-to-list 'custom-theme-load-path (make-plugin-path "color-theme-solarized"))
 (load-theme 'solarized-dark 1)
 (setq solarized-termcolors 256)
 

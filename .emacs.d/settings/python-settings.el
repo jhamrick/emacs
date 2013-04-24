@@ -3,7 +3,7 @@
 ;------------------------;
 
 ; python-mode
-(setq py-install-directory "~/.emacs.d/plugins/python-mode/")
+(setq py-install-directory (make-plugin-path "python-mode/"))
 (add-to-list 'load-path py-install-directory)
 (require 'python-mode) 
 
@@ -59,7 +59,7 @@
 ; pymacs
 (defun setup-pymacs ()
   (interactive)
-  (add-to-list 'load-path "~/.emacs.d/plugins/pymacs")
+  (include-plugin "pymacs")
   (autoload 'pymacs-apply "pymacs")
   (autoload 'pymacs-call "pymacs")
   (autoload 'pymacs-eval "pymacs" -1 1)
@@ -106,7 +106,7 @@
 (setq ein:query-timeout 1000)
 
 ; IPython notebook
-(add-to-list 'load-path "~/.emacs.d/plugins/emacs-ipython-notebook/lisp")
+(include-plugin "emacs-ipython-notebook/lisp")
 (require 'ein)
 
 ; shortcut function to load notebooklist
