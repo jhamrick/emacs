@@ -102,6 +102,7 @@
 	 (expand-file-name "~/.rvm/rubies/ruby-1.9.3-p392/bin") ":"
 	 (getenv "PATH")))
 (setq scss-sass-command (expand-file-name "~/.rvm/gems/ruby-1.9.3-p392/bin/sass"))
+(setq scss-compile-at-save nil)
 
 ;; Put auto 'custom' changes in a separate file
 (load 
