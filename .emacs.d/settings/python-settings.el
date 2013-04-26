@@ -115,6 +115,10 @@
   (interactive)
   (ein:notebooklist-open))
 
+; pydoc info
+(include-plugin "pydoc-info-0.2")
+(require 'pydoc-info)
+
 ; jedi python completion
 (include-plugin "ctable")   ; required for epc
 (include-plugin "deferred") ; required for epc

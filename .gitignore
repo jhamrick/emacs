@@ -1,6 +1,6 @@
 *~
 *.elc
-color-theme-*
-python-mode*
-
+.emacs.d/plugins/color-theme-*
+.emacs.d/plugins/python-mode*
 .emacs.d/plugins/auctex
+.emacs.d/plugins/pydoc-info-*
