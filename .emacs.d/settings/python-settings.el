@@ -115,6 +115,15 @@
   (interactive)
   (ein:notebooklist-open))
 
+; jedi python completion
+(include-plugin "ctable")   ; required for epc
+(include-plugin "deferred") ; required for epc
+(include-plugin "epc")      ; required for jedi
+(include-plugin "jedi")
+(setq jedi:setup-keys t)
+(autoload 'jedi:setup "jedi" nil t)
+(add-hook 'python-mode-hook 'jedi:setup)
+
 ; Set PYTHONPATH, because we don't load .bashrc
 (setenv "PYTHONPATH"
  (concat 

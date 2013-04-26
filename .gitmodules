@@ -40,3 +40,15 @@
 [submodule ".emacs.d/plugins/scss-mode"]
 	path = .emacs.d/plugins/scss-mode
 	url = git://github.com/antonj/scss-mode.git
+[submodule ".emacs.d/plugins/jedi"]
+	path = .emacs.d/plugins/jedi
+	url = https://github.com/tkf/emacs-jedi.git
+[submodule ".emacs.d/plugins/epc"]
+	path = .emacs.d/plugins/epc
+	url = https://github.com/kiwanami/emacs-epc.git
+[submodule ".emacs.d/plugins/ctable"]
+	path = .emacs.d/plugins/ctable
+	url = https://github.com/kiwanami/emacs-ctable.git
+[submodule ".emacs.d/plugins/deferred"]
+	path = .emacs.d/plugins/deferred
+	url = git://github.com/kiwanami/emacs-deferred.git
