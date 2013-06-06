@@ -104,6 +104,15 @@
 (setq scss-sass-command (expand-file-name "~/.rvm/gems/ruby-1.9.3-p392/bin/sass"))
 (setq scss-compile-at-save nil)
 
+;; Matlab mode
+(include-plugin "matlab")
+(autoload 'matlab-mode "matlab" "Matlab Editing Mode" t)
+ (add-to-list
+  'auto-mode-alist
+  '("\\.m$" . matlab-mode))
+ (setq matlab-indent-function t)
+ (setq matlab-shell-command "matlab")
+
 ;; Put auto 'custom' changes in a separate file
 (load 
  (setq custom-file (expand-file-name "settings/custom.el" user-emacs-directory))

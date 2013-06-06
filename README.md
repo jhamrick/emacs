@@ -58,6 +58,7 @@ lists the other included plugins that it depends on.
 	* Autopair
 	* Pymacs
 	* Smart Operator
+* [MATLAB CVS version 2009-07-07](http://matlab-emacs.sourceforge.net/) (`.emacs.d/plugins/matlab`)
 
 ## Non-Emacs dependencies
 
