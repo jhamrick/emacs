@@ -2,7 +2,7 @@
 ;;; Auto-Complete ;;;
 ;-------------------;
 
-(setq ac-directory (make-plugin-path "auto-complete"))
+(setq ac-directory (make-elget-path "auto-complete"))
 (add-to-list 'load-path ac-directory)
 (require 'auto-complete) 
 (add-to-list 'ac-dictionary-directories (concat ac-directory "ac-dict"))

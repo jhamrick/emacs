@@ -35,6 +35,7 @@
 (setenv 
  "PATH" (concat 
 	 "$HOME/bin:"
+	 "/usr/local/share/python:"
 	 "/bin:"
 	 "/usr/bin:"
 	 "/sbin:"

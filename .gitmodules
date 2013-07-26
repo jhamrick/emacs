@@ -52,3 +52,6 @@
 [submodule ".emacs.d/plugins/deferred"]
 	path = .emacs.d/plugins/deferred
 	url = git://github.com/kiwanami/emacs-deferred.git
+[submodule ".emacs.d/plugins/el-get"]
+	path = .emacs.d/plugins/el-get
+	url = git@github.com:dimitri/el-get.git

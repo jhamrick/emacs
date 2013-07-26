@@ -15,35 +15,26 @@ lists the other included plugins that it depends on.
 
 ### Included as submodules
 
-* [Auto Complete](https://github.com/auto-complete/auto-complete) (`.emacs.d/plugins/auto-complete`)
-    * Autopair
-	* Popup
-* [Autopair](https://github.com/capitaomorte/autopair) (`.emacs.d/plugins/autopair`)
 * [Solarized Color Theme](https://github.com/sellout/emacs-color-theme-solarized) (`.emacs.d/plugins/color-theme-solarized`)
-* [Table Component](https://github.com/kiwanami/emacs-ctable) (`.emacs.d/plugins/ctable`)
-* [Deferred](https://github.com/kiwanami/emacs-deferred) (`.emacs.d/plugins/deferred`)
+* [el-get](https://github.com/dimitri/el-get) (`.emacs.d/plugins/el-get`)
 * [Emacs IPython Notebook](https://github.com/tkf/emacs-ipython-notebook) (`.emacs.d/plugins/emacs-ipython-notebook`)
-    * Auto Complete
 	* Jedi
 	* Markdown Mode
 	* MuMaMo (nxhtml)
 	* Request
 	* Websocket
-* [EPC](https://github.com/kiwanami/emacs-epc) (`.emacs.d/plugins/epc`)
-    * Table Component
-	* Deferred
-* [Jedi](https://github.com/tkf/emacs-jedi) (`.emacs.d/plugins/jedi`)
-	* Auto Complete
-	* Deferred
-    * EPC
 * [Magit](https://github.com/magit/magit) (`.emacs.d/plugins/magit`)
 * [Markdown Mode](http://jblevins.org/projects/markdown-mode/) (`.emacs.d/plugins/markdown-mode`)
 * [nxhtml](https://github.com/emacsmirror/nxhtml) (`.emacs.d/plugins/nxhtml`)
-* [Popup](https://github.com/auto-complete/popup-el) (`.emacs.d/plugins/popup`)
 * [Request](https://github.com/tkf/emacs-request) (`.emacs.d/plugins/request`)
-    * Deferred
 * [SCSS Mode](https://github.com/antonj/scss-mode/) (`.emacs.d/plugins/scss-mode`)
 * [Websocket](https://github.com/ahyatt/emacs-websocket) (`.emacs.d/plugins/websocket`)
+
+### Install using el-get
+
+* [Auto Complete](https://github.com/auto-complete/auto-complete)
+* [Jedi](https://github.com/tkf/emacs-jedi)
+* [Popup](https://github.com/auto-complete/popup-el)
 
 ### Manual install
 

@@ -1,5 +1,6 @@
 (add-to-list 'load-path "~/.emacs.d/settings")
 (setq plugin-path "~/.emacs.d/plugins/")
+(setq elget-path "~/.emacs.d/el-get/")
 
 (require 'custom-functions)
 (require 'ui-settings)
@@ -8,9 +9,9 @@
 (require 'cursor-settings)
 (require 'text-settings)
 
-;; Autopair
-(include-plugin "autopair")
-(require 'autopair)
+;; el-get
+(include-plugin "el-get")
+(require 'el-get)
 
 ;; MuMaMo
 (load (make-plugin-path "nxhtml/autostart.el"))
@@ -24,7 +25,7 @@
            (delq 'buffer-file-name mumamo-per-buffer-local-vars))))
 
 ;; Popup
-(include-plugin "popup")
+(include-elget-plugin "popup")
 (require 'popup)
 
 ;; Websocket
