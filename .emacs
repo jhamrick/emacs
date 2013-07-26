@@ -8,10 +8,6 @@
 (require 'cursor-settings)
 (require 'text-settings)
 
-;; Smart Operator
-(include-plugin "smart-operator")
-(require 'smart-operator)
-
 ;; Autopair
 (include-plugin "autopair")
 (require 'autopair)
@@ -68,9 +64,6 @@
 
 ;; Camelcase functions
 (require 'camelcase-settings)
-
-;; Fill column indicator
-;(require 'fill-column-indicator-settings)
 
 ;; Python mode 
 (require 'python-settings)
