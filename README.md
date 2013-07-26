@@ -5,15 +5,15 @@ jhamrick@berkeley.edu
 
 **Version**: GNU Emacs 24.3.1 (x86_64-apple-darwin12.4.0, NS apple-appkit-1187.39) of 2013-06-27
 
-To install the plugins that are include as submodules, you will need
-to run `git submodule init; git submodule update`.
-
 ## Emacs plugins
 
 The following plugins are required for this configuration. Each plugin
 lists the other included plugins that it depends on.
 
 ### Included as submodules
+
+To install these plugins that are include as submodules, you will need
+to run `git submodule init; git submodule update`.
 
 * [Solarized Color Theme](https://github.com/sellout/emacs-color-theme-solarized) (`.emacs.d/plugins/color-theme-solarized`)
 * [el-get](https://github.com/dimitri/el-get) (`.emacs.d/plugins/el-get`)
@@ -32,11 +32,18 @@ lists the other included plugins that it depends on.
 
 ### Install using el-get
 
+These plugins should be installed using `el-get` (which is included as
+a submodule). To install these, open emacs and run `M-x el-get-install
+<plugin>`.
+
 * [Auto Complete](https://github.com/auto-complete/auto-complete)
 * [Jedi](https://github.com/tkf/emacs-jedi)
 * [Popup](https://github.com/auto-complete/popup-el)
 
 ### Manual install
+
+These plugins must be manually downloaded and saved to the path
+indicated in the parentheses.
 
 * [AUCTex 11.87](http://www.gnu.org/software/auctex/download.html) (`.emacs.d/plugins/auctex`)
 * [Pydoc Info 0.2](https://bitbucket.org/jonwaltman/pydoc-info) (`.emacs.d/plugins/pydoc-info-0.2`)
