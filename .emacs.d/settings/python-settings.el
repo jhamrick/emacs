@@ -12,8 +12,9 @@
 (setq
  python-shell-interpreter "/usr/local/share/python/ipython"
  python-shell-interpreter-args (if (system-is-mac)
-				   "--gui=osx --pylab=osx --colors=Linux"
-                                   "--gui=wx --pylab=wx --colors=Linux")
+				   "--gui=osx --matplotlib=osx --colors=Linux"
+                                   (if (system-is-linux)
+				       "--gui=wx --matplotlib=wx --colors=Linux"))
  python-shell-prompt-regexp "In \\[[0-9]+\\]: "
  python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
  python-shell-completion-setup-code
@@ -35,9 +36,9 @@
 ; set python console args
 (setq ein:console-args
       (if (system-is-mac)
-	  '("--profile nbserver" "--gui=osx" "--pylab=osx" "--colors" "Linux")
+	  '("--gui=osx" "--matplotlib=osx" "--colors=Linux")
 	(if (system-is-linux)
-	    '("--profile nbserver" "--gui=wx" "--pylab=wx" "--colors" "Linux"))))
+	    '("--gui=wx" "--matplotlib=wx" "--colors=Linux"))))
 
 ; timeout settings
 (setq ein:query-timeout 1000)
