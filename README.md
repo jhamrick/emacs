@@ -49,7 +49,7 @@ lists the other included plugins that it depends on.
 
 * [AUCTex 11.87](http://www.gnu.org/software/auctex/download.html) (`.emacs.d/plugins/auctex`)
 * [Pydoc Info 0.2](https://bitbucket.org/jonwaltman/pydoc-info) (`.emacs.d/plugins/pydoc-info-0.2`)
-* [MATLAB CVS version 2009-07-07](http://matlab-emacs.sourceforge.net/) (`.emacs.d/plugins/matlab`)
+* [MATLAB CVS version 2013-04-02](http://matlab-emacs.sourceforge.net/) (`.emacs.d/plugins/matlab`)
 
 ## Non-Emacs dependencies
 
