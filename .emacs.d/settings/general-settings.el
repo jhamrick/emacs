@@ -47,7 +47,7 @@
 ; default window width and height
 (defun custom-set-frame-size ()
   (add-to-list 'default-frame-alist '(height . 53))
-  (add-to-list 'default-frame-alist '(width . 87)))
+  (add-to-list 'default-frame-alist '(width . 178)))
 (custom-set-frame-size)
 (add-hook 'before-make-frame-hook 'custom-set-frame-size)
 
