@@ -5,14 +5,23 @@
 ; set PATH, because we don't load .bashrc
 (setenv 
  "PATH" (concat 
-	 "$HOME/bin:"
 	 "/usr/local/share/python:"
-	 "/bin:"
-	 "/usr/bin:"
-	 "/sbin:"
-	 "/usr/sbin:"
+	 (expand-file-name "~/bin:")
 	 "/usr/local/bin:"
-	 "/usr/local/sbin"))
+	 "/usr/bin:"
+	 "/bin:"
+	 "/usr/local/sbin:"
+	 "/usr/sbin:"
+	 "/sbin:"
+	 (getenv "PATH")))
+
+; also update emacs' exec-path
+(setq exec-path (append (list 
+			 '"/usr/local/share/python"
+			 (expand-file-name "~/bin")
+			 '"/usr/local/bin"
+			 '"/usr/local/sbin")
+			exec-path))
 
 ; language
 (setq current-language-environment "English")
