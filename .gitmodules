@@ -54,4 +54,4 @@
 	url = git://github.com/kiwanami/emacs-deferred.git
 [submodule ".emacs.d/plugins/el-get"]
 	path = .emacs.d/plugins/el-get
-	url = git@github.com:dimitri/el-get.git
+	url = https://github.com/dimitri/el-get.git
