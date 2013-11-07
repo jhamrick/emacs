@@ -91,11 +91,10 @@
 ; Set PYTHONPATH, because we don't load .bashrc
 (setenv "PYTHONPATH"
  (concat 
-  "/Users/jhamrick/project/pystoch/src:"
-  "/Users/jhamrick/project/gutenbach/server/lib:"
+  "/Users/jhamrick/project/mass-inference/lib:"
   "/Users/jhamrick/project/cogphysics/dev/code:"
   "/Developer/Panda3D/lib/:"
-  "/usr/local/lib/python2.7/site-packages:"))
+  ))
 
 (provide 'python-settings)
 
