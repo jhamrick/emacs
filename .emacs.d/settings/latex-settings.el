@@ -3,7 +3,7 @@
 ;-----------;
 
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
-(include-plugin "auctex/elisp")
+(include-plugin "auctex")
 (load "auctex.el" -1 1 1)
 (load "preview-latex.el" -1 1 1)
 
