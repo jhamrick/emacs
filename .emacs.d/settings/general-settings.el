@@ -29,12 +29,12 @@
 ; don't show the startup screen
 (setq inhibit-startup-screen 1)
 ; don't show the menu bar
-(menu-bar-mode -1)
+(menu-bar-mode nil)
 ; don't show the tool bar
 (require 'tool-bar)
-(tool-bar-mode -1)
+(tool-bar-mode nil)
 ; don't show the scroll bar
-(scroll-bar-mode -1)
+(scroll-bar-mode nil)
 
 ; turn on mouse wheel support for scrolling
 (require 'mwheel)
@@ -67,7 +67,7 @@
 ;; (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
 ; always use spaces, not tabs, when indenting
-(setq-default indent-tabs-mode -1)
+(setq-default indent-tabs-mode nil)
 ; indentation styles
 (setq c-basic-offset 8)
 (setq c-default-style (quote (
@@ -92,7 +92,7 @@
 (column-number-mode 1)
 
 ; don't blink the cursor
-(blink-cursor-mode -1)
+(blink-cursor-mode nil)
 
 ; make sure transient mark mode is enabled (it should be by default,
 ; but just in case)
@@ -111,7 +111,7 @@
 (require 'font-lock)
 ;(setq font-lock-maximum-decoration 1)
 (global-font-lock-mode 1)
-(global-hi-lock-mode -1)
+(global-hi-lock-mode nil)
 (setq jit-lock-contextually 1)
 (setq jit-lock-stealth-verbose 1)
 
