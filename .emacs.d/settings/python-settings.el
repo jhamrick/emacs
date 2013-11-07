@@ -10,7 +10,7 @@
 (require 'python)
 
 (setq
- python-shell-interpreter "/usr/local/share/python/ipython"
+ python-shell-interpreter "ipython"
  python-shell-interpreter-args (if (system-is-mac)
 				   "--gui=osx --matplotlib=osx --colors=Linux"
                                    (if (system-is-linux)
