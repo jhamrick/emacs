@@ -3,25 +3,13 @@
 ;--------------------------------;
 
 ; set PATH, because we don't load .bashrc
-(setenv 
- "PATH" (concat 
-	 "/usr/local/share/python:"
-	 (expand-file-name "~/bin:")
-	 "/usr/local/bin:"
-	 "/usr/bin:"
-	 "/bin:"
-	 "/usr/local/sbin:"
-	 "/usr/sbin:"
-	 "/sbin:"
-	 (getenv "PATH")))
-
-; also update emacs' exec-path
-(setq exec-path (append (list 
-			 '"/usr/local/share/python"
-			 (expand-file-name "~/bin")
-			 '"/usr/local/bin"
-			 '"/usr/local/sbin")
-			exec-path))
+; function from https://gist.github.com/jakemcc/3887459
+(defun set-exec-path-from-shell-PATH ()
+  (let ((path-from-shell (shell-command-to-string "$SHELL -i -c 'echo $PATH'")))
+    (setenv "PATH" path-from-shell)
+    (setq exec-path (split-string path-from-shell path-separator))))
+ 
+(if window-system (set-exec-path-from-shell-PATH))
 
 ; language
 (setq current-language-environment "English")

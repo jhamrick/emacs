@@ -89,12 +89,16 @@
 	    (unless (eq buffer-file-name nil) (flymake-mode 1))))
 
 ; Set PYTHONPATH, because we don't load .bashrc
-(setenv "PYTHONPATH"
- (concat 
-  "/Users/jhamrick/project/mass-inference/lib:"
-  "/Users/jhamrick/project/cogphysics/dev/code:"
-  "/Developer/Panda3D/lib/:"
-  ))
+(defun set-python-path-from-shell-PYTHONPATH ()
+  (let ((path-from-shell (shell-command-to-string "$SHELL -i -c 'echo $PYTHONPATH'")))
+    (setenv "PYTHONPATH" path-from-shell)))
+
+(if window-system (set-python-path-from-shell-PYTHONPATH))
+
+(setq auto-mode-alist
+      (append 
+       (list '("\\.pyx" . python-mode))
+       auto-mode-alist))
 
 (provide 'python-settings)
 
