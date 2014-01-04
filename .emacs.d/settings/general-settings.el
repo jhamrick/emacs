@@ -17,12 +17,12 @@
 ; don't show the startup screen
 (setq inhibit-startup-screen 1)
 ; don't show the menu bar
-(menu-bar-mode nil)
+(menu-bar-mode 0)
 ; don't show the tool bar
 (require 'tool-bar)
-(tool-bar-mode nil)
+(tool-bar-mode 0)
 ; don't show the scroll bar
-(scroll-bar-mode nil)
+(scroll-bar-mode 0)
 
 ; turn on mouse wheel support for scrolling
 (require 'mwheel)
@@ -80,7 +80,7 @@
 (column-number-mode 1)
 
 ; don't blink the cursor
-(blink-cursor-mode nil)
+(blink-cursor-mode 0)
 
 ; make sure transient mark mode is enabled (it should be by default,
 ; but just in case)
