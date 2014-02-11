@@ -18,8 +18,13 @@ function clean() {
 function doIt() {
     for i in $(ls -a); do 
 	if [ $i != '.' -a $i != '..' -a $i != '.git' -a $i != '.DS_Store' -a $i != 'bootstrap.sh' -a $i != 'README.md' -a $i != '.gitignore' -a $i != '.gitmodules' ]; then 
-	    echo "$i"
-	    gcp -alrf "$i" "$HOME/"
+            if [ $(uname) == "Darwin" ]; then
+	        echo "$i"
+	        gcp -alrf "$i" "$HOME/"
+            else
+                echo "$i"
+                cp -alrf "$i" "$HOME/"
+            fi
 	fi
     done
 }
