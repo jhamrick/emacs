@@ -39,6 +39,7 @@ a submodule). To install these, open emacs and run `M-x el-get-install
 * [Auto Complete](https://github.com/auto-complete/auto-complete)
 * [Jedi](https://github.com/tkf/emacs-jedi)
 * [Popup](https://github.com/auto-complete/popup-el)
+* pydoc-info
 
 ### Manual install
 
