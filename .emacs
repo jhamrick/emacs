@@ -10,6 +10,20 @@
 (require 'general-settings)
 
 
+;----------------------;
+;;; Standalone tools ;;;
+;----------------------;
+
+;; el-get
+(include-plugin "el-get")
+(require 'el-get)
+(el-get)
+
+;; Git
+(include-plugin "magit")
+(require 'magit)
+
+
 ;---------------;
 ;;; Utilities ;;;
 ;---------------;
@@ -31,19 +45,6 @@
 
 ;; Camelcase functions
 (require 'camelcase-settings)
-
-
-;----------------------;
-;;; Standalone tools ;;;
-;----------------------;
-
-;; el-get
-(include-plugin "el-get")
-(require 'el-get)
-
-;; Git
-(include-plugin "magit")
-(require 'magit)
 
 
 ;-----------;
