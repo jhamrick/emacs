@@ -23,9 +23,7 @@
                matlab-mode
                nxhtml
                pydoc-info
-               request
                scss-mode
-               websocket
                popup
                jedi
                nyan-mode

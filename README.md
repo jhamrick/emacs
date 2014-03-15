@@ -3,54 +3,46 @@
 Jessica Hamrick  
 jhamrick@berkeley.edu
 
-**Version**: GNU Emacs 24.3.1 (x86_64-apple-darwin12.4.0, NS apple-appkit-1187.39) of 2013-06-27
+**Version**: GNU Emacs 24.3.1 (x86_64-apple-darwin12.4.0, NS apple-appkit-1187.39) of 2013-08-22
+
+## Installing
+
+Clone this repository, and then run the `bootstrap.sh` script. This
+will copy all of the necessary files to `~/.emacs` and
+`~/.emacs.d`. Note that if these files exist for you already, **this
+will overwrite those files**.
+
+One you have run the bootstrap script, start Emacs (make sure you are
+connected to the internet when you do this for the first time). It
+will install [`el-get`](https://github.com/dimitri/el-get) and all of
+the other plugins listed in the next section. This initial
+installation may take a while, so be patient.
+
+## Dependencies
+
+For some of the plugins to work, you will need to have some external
+dependencies installed, such as Python, IPython, git, etc. If the
+installation gives you an error, it might mean you are missing a
+required dependency that el-get doesn't install.
 
 ## Emacs plugins
 
-The following plugins are required for this configuration. Each plugin
-lists the other included plugins that it depends on.
+This configuration installs several plugins using
+[`el-get`](https://github.com/dimitri/el-get). These plugins are
+specified in `.emacs.d/settings/el-get-settings.el`, and are also
+listed below:
 
-### Included as submodules
-
-To install these plugins that are include as submodules, you will need
-to run `git submodule init; git submodule update`.
-
-* [Solarized Color Theme](https://github.com/sellout/emacs-color-theme-solarized) (`.emacs.d/plugins/color-theme-solarized`)
-* [el-get](https://github.com/dimitri/el-get) (`.emacs.d/plugins/el-get`)
-* [Emacs IPython Notebook](https://github.com/tkf/emacs-ipython-notebook) (`.emacs.d/plugins/emacs-ipython-notebook`)
-	* Jedi
-	* Markdown Mode
-	* MuMaMo (nxhtml)
-	* Request
-	* Websocket
-* [Magit](https://github.com/magit/magit) (`.emacs.d/plugins/magit`)
-* [Markdown Mode](http://jblevins.org/projects/markdown-mode/) (`.emacs.d/plugins/markdown-mode`)
-* [nxhtml](https://github.com/emacsmirror/nxhtml) (`.emacs.d/plugins/nxhtml`)
-* [Request](https://github.com/tkf/emacs-request) (`.emacs.d/plugins/request`)
-* [SCSS Mode](https://github.com/antonj/scss-mode/) (`.emacs.d/plugins/scss-mode`)
-* [Websocket](https://github.com/ahyatt/emacs-websocket) (`.emacs.d/plugins/websocket`)
-
-### Install using el-get
-
-These plugins should be installed using `el-get` (which is included as
-a submodule). To install these, open emacs and run `M-x el-get-install
-<plugin>`.
-
-* [Auto Complete](https://github.com/auto-complete/auto-complete)
-* [Jedi](https://github.com/tkf/emacs-jedi)
-* [Popup](https://github.com/auto-complete/popup-el)
-* pydoc-info
-
-### Manual install
-
-These plugins must be manually downloaded and saved to the path
-indicated in the parentheses.
-
-* [AUCTex 11.87](http://www.gnu.org/software/auctex/download.html) (`.emacs.d/plugins/auctex`)
-* [Pydoc Info 0.2](https://bitbucket.org/jonwaltman/pydoc-info) (`.emacs.d/plugins/pydoc-info-0.2`)
-* [MATLAB CVS version 2013-04-02](http://matlab-emacs.sourceforge.net/) (`.emacs.d/plugins/matlab`)
-
-## Non-Emacs dependencies
-
-* Python 2.7.4
-* IPython 1.0dev
+* `auctex` -- LaTeX plugin
+* `ein` -- [IPython notebook](http://ipython.org/notebook) plugin
+* `jedi` -- general Python support
+* `pydoc-info` -- Python documentation
+* `auto-complete` -- auto completion
+* `popup` -- visual popup (e.g., for auto completion)
+* `color-theme-solarized` -- the [solarized](http://ethanschoonover.com/solarized) color theme
+* `magit` -- git plugin
+* `markdown-mode` -- support for [Markdown](http://daringfireball.net/projects/markdown/) files
+* `matlab-mode` -- support Matlab files
+* `nxhtml` (MuMaMo)
+* `scss-mode` -- support for [SCSS](http://sass-lang.com/) files
+* `nyan-mode` -- silly mode that renders a nyan cat to display how far
+  you are through a file
