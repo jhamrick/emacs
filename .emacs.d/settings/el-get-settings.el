@@ -1,5 +1,5 @@
 ; set the el-get path, and create it if it doesn't exist
-(setq elget-path "~/.emacs.d/el-get/")
+(setq elget-path plugin-path)
 (unless (file-exists-p elget-path)
   (make-directory elget-path))
 

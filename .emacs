@@ -1,8 +1,7 @@
 ;; path where settings files are kept
 (add-to-list 'load-path "~/.emacs.d/settings")
-
-;; global config variables
-(setq plugin-path "~/.emacs.d/plugins/")
+;; path to where plugins are kept
+(setq plugin-path "~/.emacs.d/el-get/")
 
 ;; define various custom functions
 (require 'custom-functions)
