@@ -4,26 +4,23 @@
 ;; global config variables
 (setq plugin-path "~/.emacs.d/plugins/")
 
-;; various generic/global config
+;; define various custom functions
 (require 'custom-functions)
-(require 'general-settings)
 
-
-;----------------------;
-;;; Standalone tools ;;;
-;----------------------;
-
-;; el-get
+;; install dependencies with el-get
 (require 'el-get-settings)
 
-;; Git
-(include-plugin "magit")
-(require 'magit)
+;; configure general settings
+(require 'general-settings)
 
 
 ;---------------;
 ;;; Utilities ;;;
 ;---------------;
+
+;; Git
+(include-plugin "magit")
+(require 'magit)
 
 ;; Popup
 (include-elget-plugin "popup")
