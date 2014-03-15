@@ -28,6 +28,7 @@
                websocket
                popup
                jedi
+               nyan-mode
                ))   
 
 ; first enable shallow clone, so we don't need to clone the entire
