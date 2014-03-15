@@ -3,7 +3,6 @@
 
 ;; global config variables
 (setq plugin-path "~/.emacs.d/plugins/")
-(setq elget-path "~/.emacs.d/el-get/")
 
 ;; various generic/global config
 (require 'custom-functions)
@@ -15,9 +14,7 @@
 ;----------------------;
 
 ;; el-get
-(include-plugin "el-get")
-(require 'el-get)
-(el-get)
+(require 'el-get-settings)
 
 ;; Git
 (include-plugin "magit")
