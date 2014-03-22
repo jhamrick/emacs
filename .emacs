@@ -39,6 +39,9 @@
 ;; Camelcase functions
 (require 'camelcase-settings)
 
+;; Helm
+(require 'helm-settings)
+
 
 ;-----------;
 ;;; Modes ;;;
