@@ -29,4 +29,12 @@
 		     (output-pdf "evince")
 		     (output-html "xdg-open"))))))
 
+; always start the server for inverse search
+(setq-default TeX-source-correlate-start-server 0)
+
+(add-hook 'LaTeX-mode-hook
+	  (lambda ()
+	    (tex-pdf-mode 1)
+            (TeX-source-correlate-mode 1)))
+
 (provide 'latex-settings)
