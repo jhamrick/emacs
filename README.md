@@ -46,3 +46,5 @@ listed below:
 * `scss-mode` -- support for [SCSS](http://sass-lang.com/) files
 * `nyan-mode` -- silly mode that renders a nyan cat to display how far
   you are through a file
+* `helm` -- [completion and selection](https://github.com/emacs-helm/helm) narrowing framework
+* `helm-descbinds` -- describe keybindings using helm
