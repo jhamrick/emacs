@@ -3,7 +3,9 @@
 Jessica Hamrick  
 jhamrick@berkeley.edu
 
-**Version**: GNU Emacs 24.3.1 (x86_64-apple-darwin12.4.0, NS apple-appkit-1187.39) of 2013-08-22
+**Tested on versions:**
+* GNU Emacs 24.3.1 (x86_64-apple-darwin12.4.0, NS apple-appkit-1187.39) of 2013-08-22
+* GNU Emacs 24.3.1 (x86_64-pc-linux-gnu, GTK+ Version 3.4.2) of 2014-02-22 on king, modified by Debian
 
 ## Installing
 
@@ -48,3 +50,23 @@ listed below:
   you are through a file
 * `helm` -- [completion and selection](https://github.com/emacs-helm/helm) narrowing framework
 * `helm-descbinds` -- describe keybindings using helm
+
+## Gotchas
+
+Here are some issues I or others have run into when installing this configuration.
+
+### Version control systems
+
+To install all the plugins above, you need to have several different version control systems installed, including `git`, `bzr`, and `cvs`.
+
+### Trouble building AUCTeX
+
+If you get the following error:
+
+`error: el-get: ./autogen.sh el-get could not build auctex [./autogen.sh]`
+
+There are a few possible causes. Try these steps:
+
+1. Make sure you have `automake` and `texlive-full` installed (if you are on Ubuntu) or MacTeX (if you are on Mac).
+2. Try running emacs from the command line (it could be an issue with not finding the right path).
+3. If that doesn't work, run emacs from the command line with the `--debug-init` flag. This will give you more information about the error, and possibly point you towards the solution.
