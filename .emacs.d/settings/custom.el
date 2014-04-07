@@ -6,6 +6,11 @@
  ;; If there is more than one, they won't work right.
  )
 
+; color theme
+(add-to-list 'custom-theme-load-path (make-plugin-path "color-theme-solarized"))
+(load-theme 'solarized-dark 1)
+(setq solarized-termcolors 256)
+
 (require 'faces)
 (if (system-is-mac)
     (set-face-attribute 'default nil

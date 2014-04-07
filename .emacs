@@ -6,12 +6,11 @@
 ;; define various custom functions
 (require 'custom-functions)
 
-;; install dependencies with el-get
-(require 'el-get-settings)
-
 ;; configure general settings
 (require 'general-settings)
 
+;; install dependencies with el-get
+(require 'el-get-settings)
 
 ;---------------;
 ;;; Utilities ;;;

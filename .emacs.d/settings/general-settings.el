@@ -23,7 +23,7 @@
 (require 'tool-bar)
 (tool-bar-mode 0)
 ; don't show the scroll bar
-(scroll-bar-mode 0)
+(if window-system (scroll-bar-mode 0))
 
 ; turn on mouse wheel support for scrolling
 (require 'mwheel)
@@ -90,11 +90,6 @@
 ; highlight parentheses when the cursor is next to them
 (require 'paren)
 (show-paren-mode 1)
-
-; color theme
-(add-to-list 'custom-theme-load-path (make-plugin-path "color-theme-solarized"))
-(load-theme 'solarized-dark 1)
-(setq solarized-termcolors 256)
 
 ; text decoration
 (require 'font-lock)
