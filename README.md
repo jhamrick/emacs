@@ -85,20 +85,20 @@ of code in `python-settings.el` that starts with "pyflakes flymake
 integration". Otherwise, read on.
 
 1. In your `~/.bashrc`, add `$HOME/bin` to your `$PATH` environment variable like so:
-
-```
-export PATH="$HOME/bin:$PATH"
-```
+  
+  ```
+  export PATH="$HOME/bin:$PATH"
+  ```
 
 2. Create a file in `~/bin/pycheckers` with the following contents:
 
-```
-#!/bin/bash
-
-pyflakes "$1"
-pep8 --ignore=E261 --repeat "$1"
-true
-```
+  ```
+  #!/bin/bash
+  
+  pyflakes "$1"
+  pep8 --ignore=E261 --repeat "$1"
+  true
+  ```
 
 3. Make it executable with `chmod +x ~/bin/pycheckers`.
 
