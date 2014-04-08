@@ -70,3 +70,40 @@ There are a few possible causes. Try these steps:
 1. Make sure you have `automake` and `texlive-full` installed (if you are on Ubuntu) or MacTeX (if you are on Mac).
 2. Try running emacs from the command line (it could be an issue with not finding the right path).
 3. If that doesn't work, run emacs from the command line with the `--debug-init` flag. This will give you more information about the error, and possibly point you towards the solution.
+
+### No such file or directory: pycheckers
+
+`pycheckers` is a little script to check that your Python code
+conforms to the
+[PEP8 style guide](http://legacy.python.org/dev/peps/pep-0008/) using
+the [pep8](https://pypi.python.org/pypi/pep8) and
+[pyflakes](https://pypi.python.org/pypi/pyflakes/0.8.1) Python
+packages.
+
+If you do not want this functionality, you can comment out the block
+of code in `python-settings.el` that starts with "pyflakes flymake
+integration". Otherwise, read on.
+
+1. In your `~/.bashrc`, add `$HOME/bin` to your `$PATH` environment variable like so:
+
+```
+export PATH="$HOME/bin:$PATH"
+```
+
+2. Create a file in `~/bin/pycheckers` with the following contents:
+
+```
+#!/bin/bash
+
+pyflakes "$1"
+pep8 --ignore=E261 --repeat "$1"
+true
+```
+
+3. Make it executable with `chmod +x ~/bin/pycheckers`.
+
+4. Make sure you have `pep8` and `pyflakes` installed (run `pip
+   install pep8 pyflakes`).
+
+5. Now it should work! If not, please submit a bug report and let me
+   know.
