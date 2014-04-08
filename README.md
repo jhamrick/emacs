@@ -4,8 +4,8 @@ Jessica Hamrick
 jhamrick@berkeley.edu
 
 **Tested on versions:**
-* GNU Emacs 24.3.1 (x86_64-apple-darwin12.4.0, NS apple-appkit-1187.39) of 2013-08-22
-* GNU Emacs 24.3.1 (x86_64-pc-linux-gnu, GTK+ Version 3.4.2) of 2014-02-22 on king, modified by Debian
+* GNU Emacs 24.3.1 (x86_64-apple-darwin13.1.0, NS apple-appkit-1265.19) of 2014-04-06
+* GNU Emacs 24.3.1 (x86_64-pc-linux-gnu, GTK+ Version 3.4.2) of 2014-02-22
 
 ## Installing
 
