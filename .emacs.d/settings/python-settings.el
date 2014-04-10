@@ -100,5 +100,11 @@
        (list '("\\.pyx" . python-mode))
        auto-mode-alist))
 
+; keybindings
+(eval-after-load 'python
+  '(define-key python-mode-map (kbd "C-c !") 'python-shell-switch-to-shell))
+(eval-after-load 'python
+  '(define-key python-mode-map (kbd "C-c |") 'python-shell-send-region))
+
 (provide 'python-settings)
 
