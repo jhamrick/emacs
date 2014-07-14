@@ -97,7 +97,8 @@
 
 (setq auto-mode-alist
       (append 
-       (list '("\\.pyx" . python-mode))
+       (list '("\\.pyx" . python-mode)
+             '("SConstruct" . python-mode))
        auto-mode-alist))
 
 ; keybindings
