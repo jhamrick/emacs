@@ -57,7 +57,7 @@ Here are some issues I or others have run into when installing this configuratio
 
 ### Version control systems
 
-To install all the plugins above, you need to have several different version control systems installed, including `git`, `bzr`, and `cvs`.
+To install all the plugins above, you need to have several different version control systems installed, including `hg`, `git`, `bzr`, and `cvs`.
 
 ### Trouble building AUCTeX
 
