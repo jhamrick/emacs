@@ -71,6 +71,9 @@
 ;; Javascript
 (require 'js-settings)
 
+;; yasnippet
+(require 'yasnippet-settings)
+
 ;; Nyancat mode!
 (nyan-mode 1)
 
