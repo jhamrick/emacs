@@ -68,6 +68,9 @@
 ;; Matlab mode
 (require 'matlab-settings)
 
+;; Javascript
+(require 'js-settings)
+
 ;; Nyancat mode!
 (nyan-mode 1)
 
