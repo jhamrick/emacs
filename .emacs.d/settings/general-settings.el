@@ -62,7 +62,7 @@
 ; always use spaces, not tabs, when indenting
 (setq-default indent-tabs-mode nil)
 ; indentation styles
-(setq c-basic-offset 8)
+(setq c-basic-offset 4)
 (setq c-default-style (quote (
     (c-mode . "bsd") 
     (java-mode . "java") 
@@ -74,6 +74,9 @@
 
 ; set the keybinding so that you can use f4 for goto line
 (global-set-key [f4] 'goto-line)
+
+; set the keybinding so that you can use f5 for query-replace-regexp
+(global-set-key [f5] 'query-replace-regexp)
 
 ; require final newlines in files when they are saved
 (setq require-final-newline 1)
