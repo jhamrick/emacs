@@ -12,7 +12,7 @@
 (setq
  python-shell-interpreter "ipython"
  python-shell-interpreter-args (if (system-is-mac)
-				   "--colors=Linux"
+				   "--matplotlib=osx --colors=Linux"
                                    (if (system-is-linux)
 				       "--gui=wx --matplotlib=wx --colors=Linux"))
  python-shell-prompt-regexp "In \\[[0-9]+\\]: "
