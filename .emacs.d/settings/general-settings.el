@@ -75,6 +75,9 @@
 ; set the keybinding so that you can use f4 for goto line
 (global-set-key [f4] 'goto-line)
 
+; set the keybinding so that you can use f5 for query-replace-regexp
+(global-set-key [f5] 'query-replace-regexp)
+
 ; require final newlines in files when they are saved
 (setq require-final-newline 1)
 ; add a new line when going to the next line
