@@ -55,6 +55,10 @@
 ;; (global-set-key (kbd "S-C-<down>") 'shrink-window)
 ;; (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
+; make end and home keys go to the start/end of buffers
+(global-set-key (kbd "<end>") 'end-of-buffer)
+(global-set-key (kbd "<home>") 'beginning-of-buffer)
+
 ; always use spaces, not tabs, when indenting
 (setq-default indent-tabs-mode nil)
 ; indentation styles
