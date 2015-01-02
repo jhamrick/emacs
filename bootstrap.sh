@@ -6,6 +6,11 @@
 cd "$(dirname "${BASH_SOURCE}")"
 git pull origin master
 
+gitExitCode=$?
+if [[ $gitExitCode != 0 ]]; then
+    exit $gitExitCode
+fi
+
 function clean() {
         git clean -nx
 	read -p "Clean the above files? (y/n) " -n 1
