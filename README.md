@@ -50,6 +50,7 @@ listed below:
   you are through a file
 * `helm` -- [completion and selection](https://github.com/emacs-helm/helm) narrowing framework
 * `helm-descbinds` -- describe keybindings using helm
+* `yaml-mode` -- support [YAML](https://github.com/yoshiki/yaml-mode) files
 
 ## Gotchas
 
