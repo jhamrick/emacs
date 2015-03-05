@@ -74,6 +74,9 @@
 ;; Javascript
 (require 'js-settings)
 
+;; YAML mode
+(require 'yaml-settings)
+
 ;; Nyancat mode!
 (nyan-mode 1)
 
