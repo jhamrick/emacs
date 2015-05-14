@@ -8,7 +8,7 @@
 
 ; color theme
 (add-to-list 'custom-theme-load-path (make-plugin-path "color-theme-solarized"))
-(load-theme 'solarized-dark 1)
+(load-theme 'solarized 1)
 (setq solarized-termcolors 256)
 
 (require 'faces)
