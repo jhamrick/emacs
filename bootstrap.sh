@@ -6,9 +6,8 @@
 cd "$(dirname "${BASH_SOURCE}")"
 git pull origin master
 
-gitExitCode=$?
-if [[ $gitExitCode != 0 ]]; then
-    exit $gitExitCode
+if [[ $? != 0 ]]; then
+    exit $?
 fi
 
 function clean() {
@@ -44,5 +43,3 @@ else
 		doIt
 	fi
 fi
-unset clean
-unset doIt
