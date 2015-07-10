@@ -43,5 +43,3 @@ else
 		doIt
 	fi
 fi
-unset clean
-unset doIt
