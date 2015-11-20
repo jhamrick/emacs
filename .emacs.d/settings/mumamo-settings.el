@@ -2,7 +2,7 @@
 ;;; MuMaMo / nxhtml ;;;
 ;---------------------;
 
-(load (make-plugin-path "nxhtml/autostart.el"))
+(load (make-plugin-path "nxhtml/elisp/autostart.el"))
 ;; Workaround the annoying warnings:
 ;;    Warning (mumamo-per-buffer-local-vars):
 ;;    Already 'permanent-local t: buffer-file-name
