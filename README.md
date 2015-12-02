@@ -9,12 +9,12 @@ jhamrick@berkeley.edu
 
 ## Installing
 
-Clone this repository, and then run the `bootstrap.sh` script. This
-will copy all of the necessary files to `~/.emacs` and
-`~/.emacs.d`. Note that if these files exist for you already, **this
-will overwrite those files**.
+Clone this repository directly as your `~/.emacs.d`.
+```
+git clone https://github.com/jhamrick/emacs.git ~/.emacs.d
+```
 
-Once you have run the bootstrap script, start Emacs (make sure you are
+Once you have cloned this repository, start Emacs (make sure you are
 connected to the internet when you do this for the first time). It
 will install [`el-get`](https://github.com/dimitri/el-get) and all of
 the other plugins listed in the next section. This initial
