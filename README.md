@@ -112,3 +112,12 @@ integration". Otherwise, read on.
 ### Tramp is timing out
 
 If you get the error `tramp ssh: connect to host c port 22: Operation timed out` and you are running OS X Mavericks with Emacs installed using Homebrew, then this is probably due to the Mavericks upgrade. Try reinstalling Emacs through Homebrew and remove the folder `~/.emacs.d/el-get` (note: this will remove all your el-get plugins, and they will need to be reinstalled).
+
+### Auto-complete disappears from python mode
+The python mode needs to have the `jedi`, `epc`, and `pylint` packages added to your Python installation. Run this command:
+
+  ```
+  pip install jedi epc pylint
+  ```
+
+Hint provided by Andrea Crotti's EuroPython 2013 Conference talk, [Emacs and shell as your best friends](https://www.youtube.com/watch?v=0cZ7szFuz18), and the [minimal Emacs configuration](https://github.com/AndreaCrotti/minimal-emacs-configuration) used in the talk.
