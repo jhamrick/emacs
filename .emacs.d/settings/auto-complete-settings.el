@@ -17,7 +17,7 @@
 ; hack to fix ac-sources after pycomplete.el breaks it
 (add-hook 'python-mode-hook
           '(lambda ()
-             (setq ac-sources '(ac-source-pycomplete
+             (setq ac-sources '(;ac-source-pycomplete
                                 ac-source-yasnippet
                                 ac-source-abbrev
                                 ac-source-dictionary
