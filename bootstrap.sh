@@ -25,7 +25,7 @@ function doIt() {
 	if [ $i != '.' -a $i != '..' -a $i != '.git' -a $i != '.DS_Store' -a $i != 'bootstrap.sh' -a $i != 'README.md' -a $i != '.gitignore' -a $i != '.gitmodules' ]; then 
             if [ $(uname) == "Darwin" ]; then
 	        echo "$i"
-	        gcp -alrf "$i" "$HOME/"
+                cp -af "$i" "$HOME/"
             else
                 echo "$i"
                 cp -alrf "$i" "$HOME/"
