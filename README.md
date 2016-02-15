@@ -1,7 +1,6 @@
 # Emacs Configuration
 
-Jessica Hamrick  
-jhamrick@berkeley.edu
+> **Please note**: I no longer use emacs regularly and am unable to support issues on this configuration. I will leave it up for people in case it is useful, but I have disabled issues on the repository and will not respond to emails asking for help -- I receive too many emails as it is, and unfortunately I cannot respond to every one.
 
 **Tested on versions:**
 * GNU Emacs 24.3.1 (x86_64-apple-darwin13.1.0, NS apple-appkit-1265.19) of 2014-04-06
